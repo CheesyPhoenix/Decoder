@@ -1,5 +1,5 @@
-fun main(args: Array<String>) {
-    var running = true
+fun main() {
+    val running = true
     while (running){
         println("Decode or encode?")
         var input = readLine()
@@ -347,7 +347,7 @@ fun decode(inp: String?){
     if (input != null) {
         input = input.replace("\\s".toRegex(), "")
         if (input.length == 25) {
-            var i = 0;
+            var i = 0
             repeat(5) {
                 var line = ""
                 repeat(5) {
@@ -366,7 +366,7 @@ fun decode(inp: String?){
         else if (input.isNotEmpty() && input.length % 5 == 0){
             var offset = 0
             repeat(input.length / 25){
-                var i = offset;
+                var i = offset
                 repeat(5) {
                     var line = ""
                     repeat(5) {
@@ -377,7 +377,7 @@ fun decode(inp: String?){
                         }
                         i++
                     }
-                    println(line);
+                    println(line)
                 }
                 offset += 25
                 println()
